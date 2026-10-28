@@ -1,0 +1,19 @@
+<html>
+  <body>
+    <div id="content" contentEditable="true" style="outline: none;">
+      
+    </div>
+  <div>
+    <button id="save">Save</button>
+    <button id="load">Load</button>
+  </div>
+  <script>
+    document.getElementById("save").addEventListener("click", () => {
+      localStorage.setItem("notepad", document.getElementById("content").innerText)
+    })
+    document.getElementById("load").addEventListener("click", () => {
+      document.getElementById("content").innerText=localStorage.getItem("notepad")
+    })
+  </script>
+ </body>
+</html>
